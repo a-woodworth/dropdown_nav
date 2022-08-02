@@ -1,39 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <body>
+    <header>
+      <div class="main-header">
+        <a class="logo" href="index.html" aria-label="Snap home page">
+          <img src="images/logo.svg" alt="Snap logo. Click for home page.">
+        </a>
+        <nav class="main-nav" aria-label="Show or hide menu">
+          <button id="hamburger-menu" class="btn__open-nav" type="button" 
+            aria-label="open menu"
+            aria-controls="main-menu"
+            aria-expanded="false">
+            <img src="images/icon-menu.svg" alt="" aria-hidden="true">
+          </button>
+          <div class="slide-nav-content" id="slide-nav">
+            <button id="close" class="btn__close-nav" type="button"
+              aria-label="close menu">
+              <img src="images/icon-close-menu.svg" alt="" aria-hidden="true">
+            </button>
+            <ul id="main-menu" class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#" aria-haspopup="true">
+                  <span>Features</span>
+                  <span><img src="image/icon-arrow-down.svg" alt="" aria-hidden="true"></span>
+                </a>
+                <ul aria-hidden="true" aria-expanded="false" aria-label="Features submenu">
+                  <!-- Features Submenu Content -->
+                  <li>
+                    <a href="#">
+                      <span><img src="images/icon-todo.svg" alt="" aria-hidden="true"></span>
+                      <span>Todo List</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span><img src="images/icon-calendar.svg" alt="" aria-hidden="true"></span>
+                      <span>Calendar</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span><img src="images/icon-reminders.svg" alt="" aria-hidden="true"></span>
+                      <span>Reminders</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span><img src="images/icon-planning.svg" alt="" aria-hidden="true"></span>
+                      <span>Planning</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#" aria-haspopup="true">
+                  <span>Company</span>
+                  <span><img src="image/icon-arrow-down.svg" alt="" aria-hidden="true"></span>
+                </a>
+                <ul aria-hidden="true" aria-expanded="false" aria-label="Company submenu">
+                  <!-- Company Submenu Content -->
+                  <li>
+                    <a href="#">History</a>
+                  </li>
+                  <li>
+                    <a href="#">Our Team</a>
+                  </li>
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Careers</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">About</a>
+              </li>
+              <li class="main-nav__item">
+                <button class="btn btn__login">Login</button>
+                <button class="btn btn__register">Register</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__image">
+          <picture>
+            <source type="image/png" media="(min-width: 60rem)" srcset="images/image-hero-desktop.png">
+            <source type="image/png" srcset="images/image-hero-mobile.png">
+            <img src="images/image-hero-mobile.png"
+              alt="Young, african-american man holding laptop computer while typing on it">
+          </picture>
+        </div>
+        <div class="hero__header">
+          <h1 id="#hero-title" class="hero__heading">Make remote work</h1>
+          <p class="hero__subheading">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+          <button class="btn">Learn more</button>
+        </div>
+        <ul class="hero__clients" aria-label="Clients">
+          <li>
+            <a href="#" aria-label="Databiz">
+              <img src="images/client-databiz.svg" alt="Databiz logo">
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Audiophile">
+              <img src="images/client-audiophile.svg" alt="Audiophile logo">
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Meet">
+              <img src="images/client-meet.svg" alt="Meet logo">
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Maker">
+              <img src="images/client-maker.svg" alt="Maker logo">
+            </a>
+          </li>        
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <div class="main-footer">
+        <p class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/a-woodworth" target="_blank">a-woodworth</a>.</p>
+      </div>
+    </footer>
+  </body>
 </html>
