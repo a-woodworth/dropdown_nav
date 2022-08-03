@@ -4,3 +4,23 @@
   
 @use '../utilities/variables' as *;
 @use '../utilities/mixins' as *;
+
+// Navigation Buttons
+.btn__open-nav,
+.btn__close-nav {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.btn__close-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 1.375rem;
+  padding-right: 1.25rem;
+
+  &:hover {
+    transform: scale(1.25);
+  }
+}

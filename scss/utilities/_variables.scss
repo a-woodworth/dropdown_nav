@@ -16,12 +16,14 @@ $almost-white: #{'hsl(0, 0%, 98%)'};
 $medium-gray: #{'hsl(0, 0%, 41%)'};
 $almost-black: #{'hsl(0, 0%, 8%)'};
 $white: #{'hsl(0, 0%, 100%)'};
+$purple: #{'hsl(277, 42%, 51%)'};
 
 // Color Usage
 $bg-color-primary: $white;
 $text-color-primary: $medium-gray;
 $text-color-secondary: $almost-black;
 $text-color-tertiary: $almost-white;
+$accent-color: $purple;
 
 // Text
 $text-XL: pxToRem(80px);

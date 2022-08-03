@@ -51,4 +51,102 @@ a:focus {
   outline: auto 5px -webkit-focus-ring-color;
 }
 
+.btn__open-nav,
+.btn__close-nav {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.btn__close-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 1.375rem;
+  padding-right: 1.25rem;
+}
+.btn__close-nav:hover {
+  transform: scale(1.25);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+  padding-inline: 1rem;
+}
+
+header {
+  position: relative;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.show-menu {
+  visibility: visible;
+}
+
+.hide-menu {
+  visibility: hidden;
+}
+
+.overlay {
+  background: hsl(0, 0%, 8%);
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+}
+
+.slide-nav-content {
+  background: hsl(0, 0%, 100%);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 8.4375rem;
+  height: 100vh;
+  z-index: 1;
+  width: 15rem;
+}
+
+.main-nav__list {
+  padding-left: 1.5rem;
+  padding-top: 4.875rem;
+}
+
+.hero__image {
+  width: 100%;
+}
+.hero__image img {
+  display: block;
+  max-width: 100%;
+}
+
+.attribution {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 41%);
+  padding: 0.5rem 0;
+  text-align: center;
+  width: 100%;
+}
+.attribution a {
+  color: hsl(277, 42%, 51%);
+}
+.attribution a:hover {
+  font-weight: 700;
+}
+
 /*# sourceMappingURL=styles.css.map */

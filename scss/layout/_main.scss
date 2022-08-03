@@ -4,3 +4,12 @@
 
 @use '../utilities/variables' as *;
 @use '../utilities/mixins' as *;
+
+.hero__image {
+  width: 100%;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}

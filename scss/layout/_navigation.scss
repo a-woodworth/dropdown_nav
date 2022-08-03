@@ -4,3 +4,43 @@
 
 @use '../utilities/variables' as *;
 @use '../utilities/mixins' as *;
+
+// States to hide/show slide-out nav
+.show-menu {
+  visibility: visible;
+}
+
+.hide-menu {
+  visibility: hidden;
+}
+
+.overlay {
+  background: $text-color-secondary;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+}
+
+.slide-nav-content {
+  background: $bg-color-primary;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 8.4375rem;
+  height: 100vh;
+  z-index: 1;
+  width: 15rem;
+}
+
+.main-nav__list {
+  padding-left: 1.5rem;
+  padding-top: 4.875rem;
+}
