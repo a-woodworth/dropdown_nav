@@ -1,0 +1,39 @@
+// ___________________________________________________________________
+// Global Config
+// ___________________________________________________________________
+
+@use '../utilities/mixins' as *;
+
+//Font Stack
+$font-family--primary: 'Epilogue', sans-serif;
+
+// Font Weights
+$font-weight--bold: 700;
+$font-weight--regular: 500;
+
+// Primary Colors
+$almost-white: #{'hsl(0, 0%, 98%)'};
+$medium-gray: #{'hsl(0, 0%, 41%)'};
+$almost-black: #{'hsl(0, 0%, 8%)'};
+$white: #{'hsl(0, 0%, 100%)'};
+
+// Color Usage
+$bg-color-primary: $white;
+$text-color-primary: $medium-gray;
+$text-color-secondary: $almost-black;
+$text-color-tertiary: $almost-white;
+
+// Text
+$text-XL: pxToRem(80px);
+$text-L: pxToRem(36px);
+$text-M: pxToRem(18px);
+$text-S: pxToRem(16px);
+$text-XS: pxToRem(14px);
+
+// Line Height
+$line-height__headingL: 1;
+$line-height__headingS: 1.16;
+$line-height__bodyS: 1.14;
+$line-height__default: 1.6;
+
+// Breakpoints
