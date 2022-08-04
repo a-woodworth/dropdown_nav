@@ -14,11 +14,8 @@
 }
 
 .btn__close-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
+  margin-left: 12.25rem;
   padding-top: 1.375rem;
-  padding-right: 1.25rem;
 
   &:hover {
     transform: scale(1.25);
