@@ -5,7 +5,51 @@
 @use '../utilities/variables' as *;
 @use '../utilities/mixins' as *;
 
-// States to hide/show slide-out nav
+.main-nav__list {
+  padding-left: 1.5rem;
+  padding-top: 2rem;
+}
+
+.main-nav__link,
+.submenu__link-icons,
+.submenu__link {
+  @include text($text-S, $font-weight--regular, $text-color-primary);
+  line-height: $line-height__default;
+
+  &:hover {
+    color: $text-color-secondary;
+  }
+}
+
+.main-nav__item,
+.submenu__item {
+  margin-bottom: 1rem;
+}
+
+.submenu__item {
+  padding-left: 1.5rem;
+}
+
+.submenu__item:first-child {
+  margin-top: 1rem;
+}
+
+.submenu__link-icons {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.nav-icon__arrow {
+  @include size(10px, 6px);
+  margin-left: 1rem;
+  vertical-align: middle;
+}
+
+// States to hide/show slide-out nav for mobile
 .show-menu {
   visibility: visible;
 }
@@ -40,22 +84,18 @@
   width: 15rem;
 }
 
-.main-nav__list {
-  padding-left: 1.5rem;
-  padding-top: 2rem;
+// States to hide/show submenu
+.main-nav__list .main-nav__item .main-nav__sub-menu {
+  display: none;
 }
 
-.main-nav__link {
-  @include text($text-S, $font-weight--regular, $text-color-primary);
-  line-height: $line-height__default;
-
-  &:hover {
-    color: $text-color-secondary;
-  }
+.main-nav__list .main-nav__item:hover .main-nav__sub-menu {
+  display: block;
 }
 
-.nav-icon {
-  @include size(10px, 6px);
+// Flip nav-icon arrow up on hover
+.main-nav__list .main-nav__item:hover .nav-icon__arrow {
+  transform: rotate(180deg);
 }
 
 // Hide inline svg for nav-icon
