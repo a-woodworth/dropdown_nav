@@ -5,11 +5,62 @@
 @use '../utilities/variables' as *;
 @use '../utilities/mixins' as *;
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero__image {
-  width: 100%;
+  justify-self: center;
+  margin-bottom: 3rem;
 
   img {
     display: block;
     max-width: 100%;
   }
+}
+
+.hero__header {
+  padding-bottom: 3rem;
+}
+
+.hero__heading {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.hero__subheading {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.hero__clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 1rem;
+  padding-bottom: 5rem;
+
+  img {
+    margin-right: 28px;
+  }
+}
+
+[aria-label="Databiz"] img {
+  @include size(81.25px, 14.36px);
+}
+
+[aria-label="Audiophile"] img {
+  @include size(52.87px, 26px);
+}
+
+[aria-label="Meet"] img {
+  @include size(64.14px, 14.36px);
+}
+
+[aria-label="Maker"] img {
+  @include size(58.9px, 17.23px);
+  margin: 0;
 }

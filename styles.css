@@ -58,6 +58,7 @@ a:focus {
 }
 .btn:hover {
   color: hsl(0, 0%, 8%);
+  transition: ease-in 0.2s;
 }
 
 .btn__close-nav {
@@ -88,12 +89,30 @@ a:focus {
 }
 .btn__register:hover {
   border-color: hsl(0, 0%, 8%);
-  transition: all 0.3s ease 0s;
+}
+
+.btn__hero {
+  border-radius: 15px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 8%);
+  letter-spacing: 0.25px;
+  line-height: 1.6;
+  padding: 0.625rem 1.375rem;
+  max-width: 10rem;
+  justify-self: center;
+}
+.btn__hero:hover {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 0 1px hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 8%);
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto;
   margin: auto;
   padding-inline: 1rem;
 }
@@ -105,6 +124,7 @@ header {
 .main-header {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 1.5rem;
   padding-top: 1rem;
   width: 100%;
 }
@@ -215,12 +235,66 @@ header {
   width: 100%;
 }
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero__image {
-  width: 100%;
+  justify-self: center;
+  margin-bottom: 3rem;
 }
 .hero__image img {
   display: block;
   max-width: 100%;
+}
+
+.hero__header {
+  padding-bottom: 3rem;
+}
+
+.hero__heading {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.hero__subheading {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.hero__clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 1rem;
+  padding-bottom: 5rem;
+}
+.hero__clients img {
+  margin-right: 28px;
+}
+
+[aria-label=Databiz] img {
+  width: 81.25px;
+  height: 14.36px;
+}
+
+[aria-label=Audiophile] img {
+  width: 52.87px;
+  height: 26px;
+}
+
+[aria-label=Meet] img {
+  width: 64.14px;
+  height: 14.36px;
+}
+
+[aria-label=Maker] img {
+  width: 58.9px;
+  height: 17.23px;
+  margin: 0;
 }
 
 .attribution {

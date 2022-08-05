@@ -13,6 +13,7 @@
 
   &:hover {
     color: $text-color-secondary;
+    transition: ease-in 0.2s;
   }
 }
 
@@ -43,6 +44,22 @@
 
   &:hover {
     border-color: $text-color-secondary;
-    transition: all 0.3s ease 0s;
+  }
+}
+
+.btn__hero {
+  @include rounded(15px);
+  @include text($text-M, $font-weight--bold, $text-color-tertiary);
+  background-color: $text-color-secondary;
+  letter-spacing: 0.25px;
+  line-height: $line-height__default;
+  padding: 0.625rem 1.375rem;
+  max-width: 10rem;
+  justify-self: center;
+
+  &:hover {
+    background-color: $bg-color-primary;
+    box-shadow: 0 0 0 1px $text-color-secondary;
+    color: $text-color-secondary;
   }
 }
