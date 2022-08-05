@@ -6,11 +6,14 @@
 @use '../utilities/mixins' as *;
 
 // Navigation Buttons
-.btn__open-nav,
-.btn__close-nav {
+.btn {
   background-color: inherit;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    color: $text-color-secondary;
+  }
 }
 
 .btn__close-nav {
@@ -19,5 +22,27 @@
 
   &:hover {
     transform: scale(1.25);
+  }
+}
+
+.btn__login,
+.btn__register {
+  @include text($text-XS, $font-weight--regular, $text-color-primary);
+  line-height: $line-height__bodyS;
+  width: 100%;
+}
+
+.btn__login {
+  margin-bottom: 1rem;
+}
+
+.btn__register {
+  @include rounded(14px);
+  border: 1.5px solid $text-color-primary;
+  padding: 0.8125rem 0;
+
+  &:hover {
+    border-color: $text-color-secondary;
+    transition: all 0.3s ease 0s;
   }
 }

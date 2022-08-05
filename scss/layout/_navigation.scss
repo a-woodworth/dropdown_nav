@@ -102,3 +102,13 @@
 .hidden {
   display: none;
 }
+
+// Styles for login/register buttons
+.signin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.3125rem 0 0;
+  width: 100%;
+}

@@ -51,11 +51,13 @@ a:focus {
   outline: auto 5px -webkit-focus-ring-color;
 }
 
-.btn__open-nav,
-.btn__close-nav {
+.btn {
   background-color: inherit;
   border: none;
   cursor: pointer;
+}
+.btn:hover {
+  color: hsl(0, 0%, 8%);
 }
 
 .btn__close-nav {
@@ -64,6 +66,29 @@ a:focus {
 }
 .btn__close-nav:hover {
   transform: scale(1.25);
+}
+
+.btn__login,
+.btn__register {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 41%);
+  line-height: 1.14;
+  width: 100%;
+}
+
+.btn__login {
+  margin-bottom: 1rem;
+}
+
+.btn__register {
+  border-radius: 14px;
+  border: 1.5px solid hsl(0, 0%, 41%);
+  padding: 0.8125rem 0;
+}
+.btn__register:hover {
+  border-color: hsl(0, 0%, 8%);
+  transition: all 0.3s ease 0s;
 }
 
 .container {
@@ -179,6 +204,15 @@ header {
 
 .hidden {
   display: none;
+}
+
+.signin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.3125rem 0 0;
+  width: 100%;
 }
 
 .hero__image {
