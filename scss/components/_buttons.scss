@@ -35,6 +35,10 @@
 
 .btn__login {
   margin-bottom: 1rem;
+
+  @media #{$brkpoint-md} {
+    margin-bottom: 0;
+  }
 }
 
 .btn__register {
@@ -44,6 +48,11 @@
 
   &:hover {
     border-color: $text-color-secondary;
+  }
+
+  @media #{$brkpoint-md} {
+    margin-left: 2.5rem;
+    padding: 0.8125rem 1.375rem;
   }
 }
 

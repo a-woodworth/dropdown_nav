@@ -93,6 +93,11 @@ a:focus {
 .btn__login {
   margin-bottom: 1rem;
 }
+@media (min-width: 60rem) {
+  .btn__login {
+    margin-bottom: 0;
+  }
+}
 
 .btn__register {
   border-radius: 14px;
@@ -101,6 +106,12 @@ a:focus {
 }
 .btn__register:hover {
   border-color: hsl(0, 0%, 8%);
+}
+@media (min-width: 60rem) {
+  .btn__register {
+    margin-left: 2.5rem;
+    padding: 0.8125rem 1.375rem;
+  }
 }
 
 .btn__hero {
@@ -140,22 +151,55 @@ header {
   position: relative;
 }
 
+.logo {
+  display: block;
+}
+
 .main-header {
   display: flex;
-  justify-content: space-between;
   padding-bottom: 1.5rem;
   padding-top: 1rem;
   width: 100%;
 }
 @media (min-width: 60rem) {
   .main-header {
+    align-items: center;
+    gap: 3.875rem;
     padding-bottom: 6.5rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .main-nav {
+    display: block;
+    position: relative;
+    width: 100%;
   }
 }
 
 .main-nav__list {
   padding-left: 1.5rem;
   padding-top: 2rem;
+}
+@media (min-width: 60rem) {
+  .main-nav__list {
+    display: inline-flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 60rem) {
+  .main-nav__sub-menu {
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
+    margin-top: 1.25rem;
+    padding: 1.5rem;
+    position: absolute;
+  }
 }
 
 .main-nav__link,
@@ -180,9 +224,25 @@ header {
 .submenu__item {
   padding-left: 1.5rem;
 }
+@media (min-width: 60rem) {
+  .submenu__item {
+    padding-left: 0;
+  }
+}
 
 .submenu__item:first-child {
   margin-top: 1rem;
+}
+@media (min-width: 60rem) {
+  .submenu__item:first-child {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 60rem) {
+  .submenu__item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .submenu__link-icons {
@@ -198,6 +258,12 @@ header {
   height: 6px;
   margin-left: 1rem;
   vertical-align: middle;
+}
+
+@media (min-width: 60rem) {
+  [aria-label="Features submenu"] {
+    margin-left: -4rem;
+  }
 }
 
 .show-menu {
@@ -233,6 +299,17 @@ header {
   z-index: 2;
   width: 15rem;
 }
+@media (min-width: 60rem) {
+  .slide-nav-content {
+    background: none;
+    position: relative;
+    top: initial;
+    right: initial;
+    height: initial;
+    z-index: initial;
+    width: 100%;
+  }
+}
 
 .main-nav__list .main-nav__item .main-nav__sub-menu {
   display: none;
@@ -256,7 +333,13 @@ header {
   justify-content: center;
   align-items: center;
   padding: 1rem 1.3125rem 0 0;
-  width: 100%;
+}
+@media (min-width: 60rem) {
+  .signin {
+    flex-direction: row;
+    padding: 0;
+    margin-left: auto;
+  }
 }
 
 .hero {
@@ -324,7 +407,6 @@ header {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  margin-inline: 1rem;
   max-width: 30rem;
   padding-bottom: 5rem;
   padding-top: 3rem;
@@ -335,6 +417,7 @@ header {
 }
 @media (min-width: 60rem) {
   .hero__clients {
+    justify-content: space-between;
     padding-top: 6.75rem;
   }
 }

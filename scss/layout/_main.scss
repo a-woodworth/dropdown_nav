@@ -66,7 +66,6 @@
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  margin-inline: 1rem;
   max-width: 30rem;
   padding-bottom: 5rem;
   padding-top: 3rem;
@@ -77,6 +76,7 @@
   }
 
   @media #{$brkpoint-md} {
+    justify-content: space-between;
     padding-top: 6.75rem;
   }
 }
