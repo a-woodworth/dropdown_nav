@@ -47,6 +47,7 @@
   }
 }
 
+// Hero Button
 .btn__hero {
   @include rounded(15px);
   @include text($text-M, $font-weight--bold, $text-color-tertiary);
@@ -61,5 +62,11 @@
     background-color: $bg-color-primary;
     box-shadow: 0 0 0 1px $text-color-secondary;
     color: $text-color-secondary;
+  }
+
+  @media #{$brkpoint-md} {
+    justify-self: flex-start;
+    max-width: 10.25rem;
+    padding: 0.875rem 1.875rem;
   }
 }

@@ -10,57 +10,80 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 90rem;
+
+  @media #{$brkpoint-md} {
+    flex-direction: row-reverse;
+  }
 }
 
 .hero__image {
   justify-self: center;
   margin-bottom: 3rem;
+  max-width: 30rem;
 
   img {
     display: block;
     max-width: 100%;
   }
+
+  @media #{$brkpoint-md} {
+    align-self: flex-start;
+  }
 }
 
 .hero__header {
+  text-align: center;
   padding-bottom: 3rem;
+  max-width: 33.75rem;
+
+  @media #{$brkpoint-md} {
+    padding-top: 6rem;
+    text-align: left;
+  }
 }
 
 .hero__heading {
   margin-bottom: 1rem;
-  text-align: center;
+
+  @media #{$brkpoint-md} {
+    margin-bottom: 3rem;
+    min-width: 33.75rem;
+  }
 }
 
 .hero__subheading {
   margin-bottom: 1.5rem;
-  text-align: center;
+
+  @media #{$brkpoint-md} {
+    margin-bottom: 3.1875rem;
+    max-width: 28.8125rem;
+  }
 }
 
 .hero__clients {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
   margin-inline: 1rem;
+  max-width: 30rem;
   padding-bottom: 5rem;
+  padding-top: 3rem;
 
   img {
-    margin-right: 28px;
+    display: block;
+    max-width: 100%;
+  }
+
+  @media #{$brkpoint-md} {
+    padding-top: 6.75rem;
   }
 }
 
-[aria-label="Databiz"] img {
-  @include size(81.25px, 14.36px);
-}
-
-[aria-label="Audiophile"] img {
-  @include size(52.87px, 26px);
-}
-
-[aria-label="Meet"] img {
-  @include size(64.14px, 14.36px);
-}
-
-[aria-label="Maker"] img {
-  @include size(58.9px, 17.23px);
-  margin: 0;
+.line-break::after {
+  @media #{$brkpoint-md} {
+    content: '\a';
+    white-space: pre;
+  }
 }

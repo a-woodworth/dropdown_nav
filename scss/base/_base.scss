@@ -37,13 +37,23 @@ body {
 
 h1 {
   @include text($text-L, $font-weight--bold, $text-color-secondary);
-  line-height: $line-height__headingS;
   letter-spacing: -0.5px;
+  line-height: $line-height__headingS;
+
+  @media #{$brkpoint-md} {
+    font-size: $text-XL;
+    letter-spacing: -1.11px;
+    line-height: $line-height__headingL;
+  }
 }
 
 p {
   @include text($text-S, $font-weight--regular, $text-color-primary);
   line-height: $line-height__default;
+
+  @media #{$brkpoint-md} {
+    font-size: $text-M;
+  }
 }
 
 a {

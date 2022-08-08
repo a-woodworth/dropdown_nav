@@ -31,8 +31,15 @@ h1 {
   font-size: 2.25rem;
   font-weight: 700;
   color: hsl(0, 0%, 8%);
-  line-height: 1.16;
   letter-spacing: -0.5px;
+  line-height: 1.16;
+}
+@media (min-width: 60rem) {
+  h1 {
+    font-size: 5rem;
+    letter-spacing: -1.11px;
+    line-height: 1;
+  }
 }
 
 p {
@@ -40,6 +47,11 @@ p {
   font-weight: 500;
   color: hsl(0, 0%, 41%);
   line-height: 1.6;
+}
+@media (min-width: 60rem) {
+  p {
+    font-size: 1.125rem;
+  }
 }
 
 a {
@@ -108,6 +120,13 @@ a:focus {
   box-shadow: 0 0 0 1px hsl(0, 0%, 8%);
   color: hsl(0, 0%, 8%);
 }
+@media (min-width: 60rem) {
+  .btn__hero {
+    justify-self: flex-start;
+    max-width: 10.25rem;
+    padding: 0.875rem 1.875rem;
+  }
+}
 
 .container {
   display: grid;
@@ -127,6 +146,11 @@ header {
   padding-bottom: 1.5rem;
   padding-top: 1rem;
   width: 100%;
+}
+@media (min-width: 60rem) {
+  .main-header {
+    padding-bottom: 6.5rem;
+  }
 }
 
 .main-nav__list {
@@ -240,61 +264,86 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 90rem;
+}
+@media (min-width: 60rem) {
+  .hero {
+    flex-direction: row-reverse;
+  }
 }
 
 .hero__image {
   justify-self: center;
   margin-bottom: 3rem;
+  max-width: 30rem;
 }
 .hero__image img {
   display: block;
   max-width: 100%;
 }
+@media (min-width: 60rem) {
+  .hero__image {
+    align-self: flex-start;
+  }
+}
 
 .hero__header {
+  text-align: center;
   padding-bottom: 3rem;
+  max-width: 33.75rem;
+}
+@media (min-width: 60rem) {
+  .hero__header {
+    padding-top: 6rem;
+    text-align: left;
+  }
 }
 
 .hero__heading {
   margin-bottom: 1rem;
-  text-align: center;
+}
+@media (min-width: 60rem) {
+  .hero__heading {
+    margin-bottom: 3rem;
+    min-width: 33.75rem;
+  }
 }
 
 .hero__subheading {
   margin-bottom: 1.5rem;
-  text-align: center;
+}
+@media (min-width: 60rem) {
+  .hero__subheading {
+    margin-bottom: 3.1875rem;
+    max-width: 28.8125rem;
+  }
 }
 
 .hero__clients {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
   margin-inline: 1rem;
+  max-width: 30rem;
   padding-bottom: 5rem;
+  padding-top: 3rem;
 }
 .hero__clients img {
-  margin-right: 28px;
+  display: block;
+  max-width: 100%;
+}
+@media (min-width: 60rem) {
+  .hero__clients {
+    padding-top: 6.75rem;
+  }
 }
 
-[aria-label=Databiz] img {
-  width: 81.25px;
-  height: 14.36px;
-}
-
-[aria-label=Audiophile] img {
-  width: 52.87px;
-  height: 26px;
-}
-
-[aria-label=Meet] img {
-  width: 64.14px;
-  height: 14.36px;
-}
-
-[aria-label=Maker] img {
-  width: 58.9px;
-  height: 17.23px;
-  margin: 0;
+@media (min-width: 60rem) {
+  .line-break::after {
+    content: "\a";
+    white-space: pre;
+  }
 }
 
 .attribution {
