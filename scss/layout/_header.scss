@@ -9,20 +9,21 @@ header {
   position: relative;
 }
 
-.logo {
-  display: block;
-}
-
 .main-header {
   display: flex;
-  // justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
   padding-bottom: 1.5rem;
   padding-top: 1rem;
   width: 100%;
 
+  .logo img {
+    display: block;
+  }
+
   @media #{$brkpoint-md} {
-    align-items: center;
     gap: 3.875rem;
     padding-bottom: 6.5rem;
+    padding-top: 2rem;
   }
 }

@@ -17,12 +17,22 @@
   }
 }
 
+.btn__open-nav {
+  @media #{$brkpoint-md} {
+    display: none;
+  }
+}
+
 .btn__close-nav {
   margin-left: 12.25rem;
   padding-top: 1.375rem;
 
   &:hover {
     transform: scale(1.25);
+  }
+
+  @media #{$brkpoint-md} {
+    display: none;
   }
 }
 

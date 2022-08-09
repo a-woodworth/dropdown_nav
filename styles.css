@@ -73,12 +73,23 @@ a:focus {
   transition: ease-in 0.2s;
 }
 
+@media (min-width: 60rem) {
+  .btn__open-nav {
+    display: none;
+  }
+}
+
 .btn__close-nav {
   margin-left: 12.25rem;
   padding-top: 1.375rem;
 }
 .btn__close-nav:hover {
   transform: scale(1.25);
+}
+@media (min-width: 60rem) {
+  .btn__close-nav {
+    display: none;
+  }
 }
 
 .btn__login,
@@ -151,21 +162,22 @@ header {
   position: relative;
 }
 
-.logo {
-  display: block;
-}
-
 .main-header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-bottom: 1.5rem;
   padding-top: 1rem;
   width: 100%;
 }
+.main-header .logo img {
+  display: block;
+}
 @media (min-width: 60rem) {
   .main-header {
-    align-items: center;
     gap: 3.875rem;
     padding-bottom: 6.5rem;
+    padding-top: 2rem;
   }
 }
 
@@ -187,6 +199,7 @@ header {
     align-items: center;
     gap: 2.5rem;
     padding: 0;
+    visibility: visible;
     width: 100%;
   }
 }
@@ -219,6 +232,12 @@ header {
 .main-nav__item,
 .submenu__item {
   margin-bottom: 1rem;
+}
+
+@media (min-width: 60rem) {
+  .main-nav__item {
+    margin-bottom: 0;
+  }
 }
 
 .submenu__item {
@@ -377,7 +396,7 @@ header {
 }
 @media (min-width: 60rem) {
   .hero__header {
-    padding-top: 6rem;
+    padding-top: 7rem;
     text-align: left;
   }
 }
