@@ -13,6 +13,7 @@
   padding-inline: 1rem;
 
   @media #{$brkpoint-md} {
+    max-width: 90rem;
     padding-inline: 2.5rem;
   }
 }

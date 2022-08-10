@@ -15,6 +15,7 @@
   @media #{$brkpoint-md} {
     flex-direction: row-reverse;
     gap: 1rem;
+    margin-inline: auto;
   }
 }
 

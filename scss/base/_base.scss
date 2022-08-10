@@ -33,6 +33,8 @@ body {
   background-color: $bg-color-primary;
   font-family: $font-family--primary;
   min-height: 100vh;
+  margin: auto;
+  max-width: 90rem;
 }
 
 h1 {

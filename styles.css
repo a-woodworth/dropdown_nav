@@ -25,6 +25,8 @@ body {
   background-color: hsl(0, 0%, 100%);
   font-family: "Epilogue", sans-serif;
   min-height: 100vh;
+  margin: auto;
+  max-width: 90rem;
 }
 
 h1 {
@@ -160,6 +162,7 @@ a:focus {
 }
 @media (min-width: 60rem) {
   .container {
+    max-width: 90rem;
     padding-inline: 2.5rem;
   }
 }
@@ -387,6 +390,7 @@ header {
   .hero {
     flex-direction: row-reverse;
     gap: 1rem;
+    margin-inline: auto;
   }
 }
 
