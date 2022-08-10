@@ -67,6 +67,7 @@ a:focus {
   background-color: inherit;
   border: none;
   cursor: pointer;
+  font-family: "Epilogue", sans-serif;
 }
 .btn:hover {
   color: hsl(0, 0%, 8%);
@@ -145,7 +146,7 @@ a:focus {
 @media (min-width: 60rem) {
   .btn__hero {
     justify-self: flex-start;
-    max-width: 10.25rem;
+    max-width: 10.75rem;
     padding: 0.875rem 1.875rem;
   }
 }
@@ -156,6 +157,11 @@ a:focus {
   grid-template-rows: auto;
   margin: auto;
   padding-inline: 1rem;
+}
+@media (min-width: 60rem) {
+  .container {
+    padding-inline: 2.5rem;
+  }
 }
 
 header {
@@ -235,6 +241,7 @@ header {
   background-color: inherit;
   border: none;
   cursor: pointer;
+  font-family: "Epilogue", sans-serif;
 }
 
 .main-nav__item,
@@ -379,6 +386,7 @@ header {
 @media (min-width: 60rem) {
   .hero {
     flex-direction: row-reverse;
+    gap: 1rem;
   }
 }
 

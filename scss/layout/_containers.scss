@@ -11,4 +11,8 @@
   grid-template-rows: auto;
   margin: auto;
   padding-inline: 1rem;
+
+  @media #{$brkpoint-md} {
+    padding-inline: 2.5rem;
+  }
 }

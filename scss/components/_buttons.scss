@@ -10,6 +10,7 @@
   background-color: inherit;
   border: none;
   cursor: pointer;
+  font-family: $font-family--primary;
 
   &:hover {
     color: $text-color-secondary;
@@ -85,7 +86,7 @@
 
   @media #{$brkpoint-md} {
     justify-self: flex-start;
-    max-width: 10.25rem;
+    max-width: 10.75rem;
     padding: 0.875rem 1.875rem;
   }
 }
