@@ -39,6 +39,7 @@
 }
 
 .main-nav__link,
+.main-nav__dropdown,
 .submenu__link-icons,
 .submenu__link {
   @include text($text-S, $font-weight--regular, $text-color-primary);
@@ -47,6 +48,12 @@
   &:hover {
     color: $text-color-secondary;
   }
+}
+
+.main-nav__dropdown {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
 }
 
 .main-nav__item,
@@ -98,7 +105,7 @@
 }
 
 // Move first dropdown menu to left so doesn't overlap next dropdown menu
-[aria-label="Features submenu"] {
+#features-menu {
   @media #{$brkpoint-md} {
     margin-left: -4rem;
   }

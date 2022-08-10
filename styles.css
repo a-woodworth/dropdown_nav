@@ -216,6 +216,7 @@ header {
 }
 
 .main-nav__link,
+.main-nav__dropdown,
 .submenu__link-icons,
 .submenu__link {
   font-size: 1rem;
@@ -224,9 +225,16 @@ header {
   line-height: 1.6;
 }
 .main-nav__link:hover,
+.main-nav__dropdown:hover,
 .submenu__link-icons:hover,
 .submenu__link:hover {
   color: hsl(0, 0%, 8%);
+}
+
+.main-nav__dropdown {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
 }
 
 .main-nav__item,
@@ -280,7 +288,7 @@ header {
 }
 
 @media (min-width: 60rem) {
-  [aria-label="Features submenu"] {
+  #features-menu {
     margin-left: -4rem;
   }
 }
@@ -386,6 +394,7 @@ header {
 @media (min-width: 60rem) {
   .hero__image {
     align-self: flex-start;
+    margin: auto;
   }
 }
 
@@ -408,6 +417,7 @@ header {
   .hero__heading {
     margin-bottom: 3rem;
     min-width: 33.75rem;
+    white-space: pre;
   }
 }
 
@@ -442,9 +452,10 @@ header {
 }
 
 @media (min-width: 60rem) {
-  .line-break::after {
-    content: "\a";
-    white-space: pre;
+  .line-break::before {
+    content: "";
+    display: block;
+    height: 0;
   }
 }
 

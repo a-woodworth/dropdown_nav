@@ -29,6 +29,7 @@
 
   @media #{$brkpoint-md} {
     align-self: flex-start;
+    margin: auto;
   }
 }
 
@@ -49,6 +50,7 @@
   @media #{$brkpoint-md} {
     margin-bottom: 3rem;
     min-width: 33.75rem;
+    white-space: pre;
   }
 }
 
@@ -81,9 +83,10 @@
   }
 }
 
-.line-break::after {
+.line-break::before {
   @media #{$brkpoint-md} {
-    content: '\a';
-    white-space: pre;
+    content: '';
+    display: block;
+    height: 0;
   }
 }

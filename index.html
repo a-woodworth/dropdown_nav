@@ -20,11 +20,11 @@
         <a class="logo" href="index.html" aria-label="Snap home page">
           <img src="images/logo.svg" alt="Snap logo. Click for home page.">
         </a>
-        <nav class="main-nav" aria-label="Show or hide menu">
+        <nav class="main-nav" aria-label="Menu">
           <button id="hamburger-menu" class="btn btn__open-nav" type="button" 
             aria-label="open menu"
             aria-controls="main-menu"
-            aria-expanded="true">
+            aria-expanded="false">
             <img src="images/icon-menu.svg" alt="" aria-hidden="true">
           </button>
           <div class="slide-nav-content hide-menu" id="slide-nav">
@@ -34,15 +34,11 @@
             </button>
             <ul id="main-menu" class="main-nav__list">
               <li class="main-nav__item">
-                <a class="main-nav__link" href="#" aria-haspopup="true">
-                  <span>
-                    Features
-                    <svg class="nav-icon__arrow" aria-hidden="true">
-                      <use href="#arrow"></use>
-                    </svg>
-                  </span>
-                </a>
-                <ul class="main-nav__sub-menu" aria-hidden="true" aria-expanded="false" aria-label="Features submenu">
+                <button class="main-nav__dropdown" aria-expanded="false"
+                  aria-controls="features-menu">
+                  <span>Features<svg class="nav-icon__arrow" aria-hidden="true"><use href="#arrow"></use></svg></span>
+                </button>
+                <ul id="features-menu" class="main-nav__sub-menu" aria-hidden="true" aria-expanded="false">
                   <!-- Features Submenu Content -->
                   <li class="submenu__item">
                     <a class="submenu__link-icons" href="#">
@@ -71,15 +67,11 @@
                 </ul>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="#" aria-haspopup="true">
-                  <span>
-                    Company
-                    <svg class="nav-icon__arrow" aria-hidden="true">
-                      <use href="#arrow"></use>
-                    </svg>
-                  </span>
-                </a>
-                <ul class="main-nav__sub-menu" aria-hidden="true" aria-expanded="false" aria-label="Company submenu">
+                <button class="main-nav__dropdown" aria-expanded="false"
+                  aria-controls="company-menu">
+                  <span>Company<svg class="nav-icon__arrow" aria-hidden="true"><use href="#arrow"></use></svg></span>
+                </button>
+                <ul id="company-menu" class="main-nav__sub-menu" aria-hidden="true" aria-expanded="false" aria-label="Company submenu">
                   <!-- Company Submenu Content -->
                   <li class="submenu__item">
                     <a class="submenu__link" href="#">History</a>
@@ -118,7 +110,7 @@
           </picture>
         </div>
         <div class="hero__header container">
-          <h1 id="#hero-title" class="hero__heading"><span class="line-break">Make </span>remote work</h1>
+          <h1 id="#hero-title" class="hero__heading">Make&nbsp;<span class="line-break">remote work</span></h1>
           <p class="hero__subheading">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
           <button class="btn btn__hero">Learn more</button>
           <ul class="hero__clients" aria-label="Clients">
