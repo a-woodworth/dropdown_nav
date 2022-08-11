@@ -70,9 +70,9 @@
 // Hero Button
 .btn__hero {
   @include rounded(15px);
-  @include text($text-M, $font-weight--bold, $text-color-tertiary);
+  @include text($text-S, $font-weight--bold, $text-color-tertiary);
   background-color: $text-color-secondary;
-  letter-spacing: 0.25px;
+  letter-spacing: -0.22px;
   line-height: $line-height__default;
   padding: 0.625rem 1.375rem;
   max-width: 10rem;
@@ -85,7 +85,9 @@
   }
 
   @media #{$brkpoint-md} {
+    font-size: $text-M;
     justify-self: flex-start;
+    letter-spacing: -0.25px;
     max-width: 10.75rem;
     padding: 0.875rem 1.875rem;
   }

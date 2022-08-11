@@ -121,10 +121,14 @@
   visibility: hidden;
 }
 
+// Hide hamburger menu button and hide inline svg for nav-icon arrow
+.hidden {
+  display: none;
+}
+
 .overlay {
-  background: $text-color-secondary;
+  background: rgba(0, 0, 0, 0.65);
   mix-blend-mode: normal;
-  opacity: 0.75;
   position: absolute;
   top: 0;
   left: 0;
@@ -169,11 +173,6 @@
 // Flip nav-icon arrow up on hover
 .main-nav__list .main-nav__item:hover .nav-icon__arrow {
   transform: rotate(180deg);
-}
-
-// Hide inline svg for nav-icon
-.hidden {
-  display: none;
 }
 
 // Styles for login/register buttons

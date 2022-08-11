@@ -27,6 +27,7 @@ body {
   min-height: 100vh;
   margin: auto;
   max-width: 90rem;
+  position: relative;
 }
 
 h1 {
@@ -130,11 +131,11 @@ a:focus {
 
 .btn__hero {
   border-radius: 15px;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
   color: hsl(0, 0%, 98%);
   background-color: hsl(0, 0%, 8%);
-  letter-spacing: 0.25px;
+  letter-spacing: -0.22px;
   line-height: 1.6;
   padding: 0.625rem 1.375rem;
   max-width: 10rem;
@@ -147,7 +148,9 @@ a:focus {
 }
 @media (min-width: 60rem) {
   .btn__hero {
+    font-size: 1.125rem;
     justify-self: flex-start;
+    letter-spacing: -0.25px;
     max-width: 10.75rem;
     padding: 0.875rem 1.875rem;
   }
@@ -162,7 +165,6 @@ a:focus {
 }
 @media (min-width: 60rem) {
   .container {
-    max-width: 90rem;
     padding-inline: 2.5rem;
   }
 }
@@ -311,10 +313,13 @@ header {
   visibility: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .overlay {
-  background: hsl(0, 0%, 8%);
+  background: rgba(0, 0, 0, 0.65);
   mix-blend-mode: normal;
-  opacity: 0.75;
   position: absolute;
   top: 0;
   left: 0;
@@ -360,10 +365,6 @@ header {
   transform: rotate(180deg);
 }
 
-.hidden {
-  display: none;
-}
-
 .signin {
   display: flex;
   flex-direction: column;
@@ -407,6 +408,7 @@ header {
   .hero__image {
     align-self: flex-start;
     margin: auto;
+    padding-bottom: 8.125rem;
   }
 }
 
