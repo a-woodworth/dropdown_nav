@@ -14,11 +14,11 @@
 
   &:hover {
     color: $text-color-secondary;
-    transition: ease-in 0.2s;
   }
 }
 
 .btn__open-nav {
+  transition: none;
   @media #{$brkpoint-md} {
     display: none;
   }
@@ -29,7 +29,7 @@
   padding-top: 1.375rem;
 
   &:hover {
-    transform: scale(1.25);
+    transform: scale(1.15);
   }
 
   @media #{$brkpoint-md} {
@@ -59,6 +59,7 @@
 
   &:hover {
     border-color: $text-color-secondary;
+    transition: ease-in 0.2s;
   }
 
   @media #{$brkpoint-md} {
@@ -82,6 +83,7 @@
     background-color: $bg-color-primary;
     box-shadow: 0 0 0 1px $text-color-secondary;
     color: $text-color-secondary;
+    transition: ease-in 0.2s;
   }
 
   @media #{$brkpoint-md} {

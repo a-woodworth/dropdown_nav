@@ -74,9 +74,11 @@ a:focus {
 }
 .btn:hover {
   color: hsl(0, 0%, 8%);
-  transition: ease-in 0.2s;
 }
 
+.btn__open-nav {
+  transition: none;
+}
 @media (min-width: 60rem) {
   .btn__open-nav {
     display: none;
@@ -88,7 +90,7 @@ a:focus {
   padding-top: 1.375rem;
 }
 .btn__close-nav:hover {
-  transform: scale(1.25);
+  transform: scale(1.15);
 }
 @media (min-width: 60rem) {
   .btn__close-nav {
@@ -121,6 +123,7 @@ a:focus {
 }
 .btn__register:hover {
   border-color: hsl(0, 0%, 8%);
+  transition: ease-in 0.2s;
 }
 @media (min-width: 60rem) {
   .btn__register {
@@ -145,6 +148,7 @@ a:focus {
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0 0 0 1px hsl(0, 0%, 8%);
   color: hsl(0, 0%, 8%);
+  transition: ease-in 0.2s;
 }
 @media (min-width: 60rem) {
   .btn__hero {
@@ -311,6 +315,7 @@ header {
 
 .hide-menu {
   visibility: hidden;
+  width: 0;
 }
 
 .hidden {
@@ -327,7 +332,6 @@ header {
   right: 0;
   height: 100vh;
   overflow: hidden;
-  width: 100%;
   z-index: 1;
 }
 

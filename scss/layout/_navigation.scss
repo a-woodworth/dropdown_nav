@@ -119,9 +119,10 @@
 
 .hide-menu {
   visibility: hidden;
+  width: 0;
 }
 
-// Hide hamburger menu button and hide inline svg for nav-icon arrow
+// Hide inline svg for nav-icon arrow
 .hidden {
   display: none;
 }
@@ -136,7 +137,7 @@
   right: 0;
   height: 100vh;
   overflow: hidden;
-  width: 100%;
+  // width: 100%;
   z-index: 1;
 }
 
