@@ -93,6 +93,7 @@
 .submenu__link-icons {
   display: grid;
   grid-template-columns: 2rem 1fr;
+  width: 15ch;
 
   img {
     vertical-align: middle;
@@ -122,9 +123,13 @@
   width: 0;
 }
 
-// Hide inline svg for nav-icon arrow
+// Hide submenus; Hide inline svg for nav-icon arrow
 .hidden {
   display: none;
+}
+
+.dropdown-active {
+  display: block;
 }
 
 .overlay {
@@ -137,7 +142,6 @@
   right: 0;
   height: 100vh;
   overflow: hidden;
-  // width: 100%;
   z-index: 1;
 }
 
@@ -162,17 +166,17 @@
   }
 }
 
-// States to hide/show submenu
-.main-nav__list .main-nav__item .main-nav__sub-menu {
-  display: none;
-}
-
-.main-nav__list .main-nav__item:hover .main-nav__sub-menu {
-  display: block;
+// Hover states for submenus
+.main-nav__list .main-nav__item {
+  &:hover .main-nav__sub-menu,
+  &:focus-within .main-nav__sub-menu{
+    display: block;
+  }
 }
 
 // Flip nav-icon arrow up on hover
-.main-nav__list .main-nav__item:hover .nav-icon__arrow {
+.main-nav__list .main-nav__item:hover .nav-icon__arrow,
+.main-nav__list .main-nav__item:focus-within .nav-icon__arrow {
   transform: rotate(180deg);
 }
 

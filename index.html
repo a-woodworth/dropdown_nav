@@ -22,7 +22,7 @@
         </a>
         <nav class="main-nav" aria-label="Menu">
           <button id="hamburger-menu" class="btn btn__open-nav" type="button" 
-            aria-label="open menu"
+            aria-label="menu"
             aria-controls="main-menu"
             aria-expanded="false">
             <img src="images/icon-menu.svg" alt="" aria-hidden="true">
@@ -34,11 +34,12 @@
             </button>
             <ul id="main-menu" class="main-nav__list">
               <li class="main-nav__item">
-                <button class="main-nav__dropdown" aria-expanded="false"
+                <button class="main-nav__dropdown"
+                  aria-expanded="false"
                   aria-controls="features-menu">
                   <span>Features<svg class="nav-icon__arrow" aria-hidden="true"><use href="#arrow"></use></svg></span>
                 </button>
-                <ul id="features-menu" class="main-nav__sub-menu" aria-hidden="true" aria-expanded="false">
+                <ul id="features-menu" class="main-nav__sub-menu hidden">
                   <!-- Features Submenu Content -->
                   <li class="submenu__item">
                     <a class="submenu__link-icons" href="#">
@@ -67,11 +68,12 @@
                 </ul>
               </li>
               <li class="main-nav__item">
-                <button class="main-nav__dropdown" aria-expanded="false"
+                <button class="main-nav__dropdown"
+                  aria-expanded="false"
                   aria-controls="company-menu">
                   <span>Company<svg class="nav-icon__arrow" aria-hidden="true"><use href="#arrow"></use></svg></span>
                 </button>
-                <ul id="company-menu" class="main-nav__sub-menu" aria-hidden="true" aria-expanded="false" aria-label="Company submenu">
+                <ul id="company-menu" class="main-nav__sub-menu hidden">
                   <!-- Company Submenu Content -->
                   <li class="submenu__item">
                     <a class="submenu__link" href="#">History</a>
