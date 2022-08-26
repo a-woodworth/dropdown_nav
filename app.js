@@ -18,6 +18,7 @@ function openMobileNav() {
   // Show slide-out nav menu
   mobileNavContent.classList.remove('hide-menu');
   mobileNavContent.classList.add('show-menu');
+  closeMenuBtn.focus();
 }
 
 function closeMobileNav() {
@@ -29,6 +30,7 @@ function closeMobileNav() {
   // Show hamburger button
   openMenuBtn.classList.toggle('hide-menu');
   openMenuBtn.setAttribute('aria-expanded', 'false');
+  openMenuBtn.focus();
 }
 
 function toggleDropdownMenu(button) {
@@ -74,13 +76,22 @@ function closeDropdownMenu() {
 openMenuBtn.addEventListener('click', () => {
   if(openMenuBtn.classList.contains('hide-menu')) {
     closeMobileNav();
+    openMenuBtn.focus()
   } else {
     openMobileNav();
+    closeMenuBtn.focus();
   }
 });
 
 closeMenuBtn.addEventListener('click', () => {
   closeMobileNav();
+});
+
+// Close mobile nav with Escape key
+closeMenuBtn.addEventListener('keydown', (e) => {
+  if (e.keyCode === 'Escape' || e.keyCode === 27) {
+    closeMobileNav();
+  }
 });
 
 dropdownBtns.forEach(dropBtn => {
