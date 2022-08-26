@@ -166,10 +166,6 @@
   }
 }
 
-.slide-nav-content::before {
-  box-shadow: 0px 0px 0px 1000px rgb(0 0 0 / 70%);
-}
-
 // Hover states for submenus
 .main-nav__list .main-nav__item {
   &:hover .main-nav__sub-menu,

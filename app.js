@@ -76,10 +76,8 @@ function closeDropdownMenu() {
 openMenuBtn.addEventListener('click', () => {
   if(openMenuBtn.classList.contains('hide-menu')) {
     closeMobileNav();
-    openMenuBtn.focus()
   } else {
     openMobileNav();
-    closeMenuBtn.focus();
   }
 });
 
