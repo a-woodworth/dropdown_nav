@@ -115,11 +115,6 @@
 }
 
 // States to hide/show slide-out nav for mobile
-.show-menu {
-  transform: translate3d(-15rem, 0, 0);
-  transition: width 0.5s all ease-in-out;
-}
-
 .visible {
   visibility: visible;
 }
@@ -155,8 +150,8 @@
   top: 0;
   right: -15rem;
   height: 100vh;
-  z-index: 2;
   width: 15rem;
+  z-index: 2;
 
   @media #{$brkpoint-md} {
     background: none;
@@ -167,6 +162,11 @@
     z-index: unset;
     width: 100%;
   }
+}
+
+.slide-nav-content.show-menu {
+  transition: right 0.5s ease-in-out;
+  right: 0;
 }
 
 // Hover states for submenus
