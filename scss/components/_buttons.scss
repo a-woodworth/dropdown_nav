@@ -15,6 +15,10 @@
   &:hover {
     color: $text-color-secondary;
   }
+  &:focus {
+    outline: auto 2px Highlight; // for non-webkit browsers
+    outline: auto 5px -webkit-focus-ring-color; // for webkit browsers
+  }
 }
 
 .btn__open-nav {
@@ -41,11 +45,6 @@
   @include text($text-XS, $font-weight--regular, $text-color-primary);
   line-height: $line-height__bodyS;
   width: 100%;
-
-  &:focus {
-    outline: auto 2px Highlight; // for non-webkit browsers
-    outline: auto 5px -webkit-focus-ring-color; // for webkit browsers
-  }
 }
 
 .btn__login {

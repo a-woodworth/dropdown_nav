@@ -22,21 +22,21 @@
         </a>
         <nav class="main-nav" aria-label="Menu">
           <button id="hamburger-menu" class="btn btn__open-nav" type="button" 
-            aria-label="menu"
+            aria-label="open menu"
             aria-controls="main-menu"
             aria-expanded="false">
-            <img src="images/icon-menu.svg" alt="" aria-hidden="true">
+              <img src="images/icon-menu.svg" alt="" aria-hidden="true">
           </button>
           <div class="slide-nav-content hide-menu" id="slide-nav">
-            <button id="close" class="btn btn__close-nav" type="button"
-              aria-label="close menu">
+            <button id="close" class="btn btn__close-nav" type="button" aria-label="close menu">
               <img src="images/icon-close-menu.svg" alt="" aria-hidden="true">
             </button>
             <ul id="main-menu" class="main-nav__list">
               <li class="main-nav__item">
                 <button class="main-nav__dropdown"
                   aria-expanded="false"
-                  aria-controls="features-menu">
+                  aria-controls="features-menu"
+                  aria-haspopup="true">
                   <span>Features<svg class="nav-icon__arrow" aria-hidden="true"><use href="#arrow"></use></svg></span>
                 </button>
                 <ul id="features-menu" class="main-nav__sub-menu hidden">
@@ -70,7 +70,8 @@
               <li class="main-nav__item">
                 <button class="main-nav__dropdown"
                   aria-expanded="false"
-                  aria-controls="company-menu">
+                  aria-controls="company-menu"
+                  aria-haspopup="true">
                   <span>Company<svg class="nav-icon__arrow" aria-hidden="true"><use href="#arrow"></use></svg></span>
                 </button>
                 <ul id="company-menu" class="main-nav__sub-menu hidden">
@@ -102,7 +103,7 @@
       </div>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero" aria-labelledby="#hero-title">
         <div class="hero__image">
           <picture>
             <source type="image/png" media="(min-width: 60rem)" srcset="images/image-hero-desktop.png">

@@ -116,9 +116,12 @@
 
 // States to hide/show slide-out nav for mobile
 .show-menu {
-  visibility: visible;
   transform: translate3d(-15rem, 0, 0);
-  transition: 0.5s all ease-in-out;
+  transition: width 0.5s all ease-in-out;
+}
+
+.visible {
+  visibility: visible;
 }
 
 .hide-menu {

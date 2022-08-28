@@ -1,11 +1,12 @@
 // Mobile Nav Menu
 const mainNav = document.querySelector('.main-nav');
 const navLinks = document.querySelectorAll('.main-nav__link');
-const signinBtns = document.querySelectorAll('.signin');
+const mobileNavContent = document.querySelector('#slide-nav');
+const mobileMenuItems = [...document.querySelectorAll('#slide-nav button, #slide-nav a')];
 const openMenuBtn = document.querySelector('#hamburger-menu');
 const closeMenuBtn = document.querySelector('#close');
 const dropdownBtns = document.querySelectorAll('.main-nav__dropdown');
-const mobileNavContent = document.querySelector('#slide-nav');
+const signinBtns = document.querySelectorAll('.signin');
 let currentDropdownMenu = false;
 let opened = false;
 
@@ -18,11 +19,14 @@ function openMobileNav() {
   // Show slide-out nav menu
   mobileNavContent.classList.remove('hide-menu');
   mobileNavContent.classList.add('show-menu');
-  closeMenuBtn.focus();
+  mobileNavContent.classList.add('visible');
+  // Focus on first menu item(close button)
+  mobileMenuItems[0].focus();
 }
 
 function closeMobileNav() {
   // Hide slide-out nav menu
+  mobileNavContent.classList.remove('visible');
   mobileNavContent.classList.remove('show-menu');
   mobileNavContent.classList.add('hide-menu');
   // Remove overlay
@@ -30,6 +34,7 @@ function closeMobileNav() {
   // Show hamburger button
   openMenuBtn.classList.toggle('hide-menu');
   openMenuBtn.setAttribute('aria-expanded', 'false');
+  // Focus on hamburger button
   openMenuBtn.focus();
 }
 
@@ -66,7 +71,7 @@ function handleDropdownMenu(e) {
   toggleDropdownMenu(dropBtn);
 }
 
-// Close dropdown menu from nav link or signin button
+// Close an open dropdown menu from nav link or signin button
 function closeDropdownMenu() {
   if(opened === true) {
     toggleDropdownMenu(currentDropdownMenu);
@@ -85,10 +90,17 @@ closeMenuBtn.addEventListener('click', () => {
   closeMobileNav();
 });
 
-// Close mobile nav with Escape key
+// Close Mobile nav with Escape key
 closeMenuBtn.addEventListener('keydown', (e) => {
   if (e.keyCode === 'Escape' || e.keyCode === 27) {
     closeMobileNav();
+  }
+});
+
+// Trap focus inside Mobile nav menu for keyboard users
+mobileMenuItems[mobileMenuItems.length - 1].addEventListener('keydown', (e) => {
+  if(e.keyCode === 'Tab' || e.keyCode === 9) {
+    mobileMenuItems[0].focus();
   }
 });
 

@@ -75,6 +75,10 @@ a:focus {
 .btn:hover {
   color: hsl(0, 0%, 8%);
 }
+.btn:focus {
+  outline: auto 2px Highlight;
+  outline: auto 5px -webkit-focus-ring-color;
+}
 
 @media (min-width: 60rem) {
   .btn__open-nav {
@@ -102,11 +106,6 @@ a:focus {
   color: hsl(0, 0%, 41%);
   line-height: 1.14;
   width: 100%;
-}
-.btn__login:focus,
-.btn__register:focus {
-  outline: auto 2px Highlight;
-  outline: auto 5px -webkit-focus-ring-color;
 }
 
 .btn__login {
@@ -314,9 +313,12 @@ header {
 }
 
 .show-menu {
-  visibility: visible;
   transform: translate3d(-15rem, 0, 0);
-  transition: 0.5s all ease-in-out;
+  transition: width 0.5s all ease-in-out;
+}
+
+.visible {
+  visibility: visible;
 }
 
 .hide-menu {
@@ -362,10 +364,6 @@ header {
     z-index: unset;
     width: 100%;
   }
-}
-
-.slide-nav-content::before {
-  box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.7);
 }
 
 .main-nav__list .main-nav__item:hover .main-nav__sub-menu, .main-nav__list .main-nav__item:focus-within .main-nav__sub-menu {
