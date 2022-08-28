@@ -105,6 +105,7 @@ a:focus {
   font-weight: 500;
   color: hsl(0, 0%, 41%);
   line-height: 1.14;
+  text-align: center;
   width: 100%;
 }
 

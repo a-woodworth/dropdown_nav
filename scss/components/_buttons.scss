@@ -5,7 +5,7 @@
 @use '../utilities/variables' as *;
 @use '../utilities/mixins' as *;
 
-// Navigation Buttons
+// Navigation Link Buttons
 .btn {
   background-color: inherit;
   border: none;
@@ -44,6 +44,7 @@
 .btn__register {
   @include text($text-XS, $font-weight--regular, $text-color-primary);
   line-height: $line-height__bodyS;
+  text-align: center;
   width: 100%;
 }
 

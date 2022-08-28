@@ -6,7 +6,7 @@ const mobileMenuItems = [...document.querySelectorAll('#slide-nav button, #slide
 const openMenuBtn = document.querySelector('#hamburger-menu');
 const closeMenuBtn = document.querySelector('#close');
 const dropdownBtns = document.querySelectorAll('.main-nav__dropdown');
-const signinBtns = document.querySelectorAll('.signin');
+const signinLinks = document.querySelectorAll('.signin a');
 let currentDropdownMenu = false;
 let opened = false;
 
@@ -71,7 +71,7 @@ function handleDropdownMenu(e) {
   toggleDropdownMenu(dropBtn);
 }
 
-// Close an open dropdown menu from nav link or signin button
+// Close an open dropdown menu from nav link or signin links
 function closeDropdownMenu() {
   if(opened === true) {
     toggleDropdownMenu(currentDropdownMenu);
@@ -114,6 +114,6 @@ navLinks.forEach(link => {
   link.addEventListener('click', closeDropdownMenu);
 });
 
-signinBtns.forEach(button => {
-  button.addEventListener('click', closeDropdownMenu);
+signinLinks.forEach(link => {
+  link.addEventListener('click', closeDropdownMenu);
 });
