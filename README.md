@@ -32,7 +32,7 @@ Users should be able to:
 ![Mobile Sceenshot](/screenshots/mobile-screenshot-375px.png)
 
 ### Links
-- Solution URL: [Solution]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-javascript-css-flex-and-grid-Ahs6GG-Ccf)
 - Live Site URL: [Live Site](https://a-woodworth.github.io/dropdown_nav/)
 
 ### Built with
